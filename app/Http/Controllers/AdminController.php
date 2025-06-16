@@ -44,4 +44,13 @@ class AdminController extends Controller
         Auth::guard('admin')->logout();
         return redirect()->route('admin.login')->with('success', 'Logout Successfully');
     } //End Method
+
+    public function AdminForgetPassword()
+    {
+        return view('admin.forget_password');
+    } //End Method
+
+    public function AdminForgetPasswordSubmit(Request $request) {
+        
+    } //End Method
 }
