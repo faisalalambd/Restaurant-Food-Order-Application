@@ -69,7 +69,7 @@ class AdminController extends Controller
         $admin_data->token = $token;
         $admin_data->update();
 
-        $reset_link = url('admin/reset-password/' . $token . '/' . $request->email);
+        $reset_link = url('admin/reset/password/' . $token . '/' . $request->email);
         $subject = 'Reset Password';
         $message = 'Please Click on below link to reset password <br>';
         $message .= "<a href='" . $reset_link . "'> Click Here </a>";
@@ -77,5 +77,16 @@ class AdminController extends Controller
         Mail::to($request->email)->send(new WebsiteMail($subject, $message));
 
         return redirect()->back()->with('success', 'Reset Password Link Send On Your Email');
+    } //End Method
+
+    public function AdminResetPassword($token, $email)
+    {
+        $admin_data = Admin::where('email', $email)->where('token', $token)->first();
+
+        if (!$admin_data) {
+            return redirect()->route('admin.login')->with('error', 'Invalid Token or Email');
+        }
+
+        return view('admin.reset_password', compact('token', 'email'));
     } //End Method
 }
