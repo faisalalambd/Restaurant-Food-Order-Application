@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 use App\Mail\WebsiteMail;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Mail;
 
 class AdminController extends Controller
@@ -88,5 +89,20 @@ class AdminController extends Controller
         }
 
         return view('admin.reset_password', compact('token', 'email'));
+    } //End Method
+
+    public function AdminResetPasswordSubmit(Request $request)
+    {
+        $request->validate([
+            'password' => 'required',
+            'password_confirmation' => 'required|same:password',
+        ]);
+
+        $admin_data = Admin::where('email', $request->email)->where('token', $request->token)->first();
+        $admin_data->password = Hash::make($request->password);
+        $admin_data->token = '';
+        $admin_data->update();
+
+        return redirect()->route('admin.login')->with('success', 'Password Reset Successfully');
     } //End Method
 }

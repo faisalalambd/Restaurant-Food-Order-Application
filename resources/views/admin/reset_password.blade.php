@@ -19,7 +19,7 @@
         <li>{{ Session::get('success') }}</li>
     @endif
 
-    <form action="{{ route('admin.login.submit') }}" method="post">
+    <form action="{{ route('admin.reset.password.submit') }}" method="post">
 
         @csrf
 
