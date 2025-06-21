@@ -105,4 +105,13 @@ class AdminController extends Controller
 
         return redirect()->route('admin.login')->with('success', 'Password Reset Successfully');
     } //End Method
+
+    public function AdminProfile()
+    {
+        $id = Auth::guard('admin')->id();
+
+        $profile_data = Admin::find($id);
+
+        return view('admin.profile.profile_dashboard', compact('profile_data'));
+    } //End Method
 }
