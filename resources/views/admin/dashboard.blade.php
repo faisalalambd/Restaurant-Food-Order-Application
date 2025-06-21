@@ -23,6 +23,8 @@
     <link href="{{ asset('backend/assets/css/icons.min.css') }}" rel="stylesheet" type="text/css" />
     {{-- App CSS --}}
     <link href="{{ asset('backend/assets/css/app.min.css') }}" id="app-style" rel="stylesheet" type="text/css" />
+    {{-- jQuery CDN --}}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
 </head>
 
@@ -54,8 +56,7 @@
     {{-- Right Bar Overlay --}}
     <div class="rightbar-overlay"></div>
 
-    {{-- jQuery --}}
-    <script src="{{ asset('backend/assets/libs/jquery/jquery.min.js') }}"></script>
+
     {{-- Bootstrap JS --}}
     <script src="{{ asset('backend/assets/libs/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
     {{-- Metis Menu JS --}}
