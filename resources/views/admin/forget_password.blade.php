@@ -48,7 +48,7 @@
                         <div class="d-flex flex-column h-100">
                             <div class="auth-content my-auto">
                                 <div class="card shadow">
-                                    <div class="card-body">
+                                    <div class="card-body mb-4">
 
                                         <div class="m-3 m-md-4 text-center">
                                             <a href="index.html" class="d-block auth-logo">
@@ -104,7 +104,7 @@
 
                                         </form>
 
-                                        <div class="mt-5 text-center">
+                                        <div class="mt-4 text-center">
                                             <p class="text-muted mb-0">Remember It ? <a href="{{ route('admin.login') }}" class="text-primary fw-semibold"> Sign In </a></p>
                                         </div>
 

@@ -48,7 +48,7 @@
                         <div class="d-flex flex-column h-100">
                             <div class="auth-content my-auto">
                                 <div class="card shadow">
-                                    <div class="card-body">
+                                    <div class="card-body mb-4">
 
                                         <div class="m-3 m-md-4 text-center">
                                             <a href="index.html" class="d-block auth-logo">
@@ -122,9 +122,9 @@
 
                                         </form>
 
-                                        <div class="mt-4 text-center">
+                                        {{-- <div class="mt-4 text-center">
                                             <p class="text-muted mb-0">Don't have an account ? <a href="auth-register.html" class="text-primary fw-semibold"> Signup now </a> </p>
-                                        </div>
+                                        </div> --}}
 
                                     </div>
                                 </div>
