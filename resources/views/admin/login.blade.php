@@ -61,31 +61,43 @@
                                             <p class="text-muted mt-2">Sign in to continue to Admin Dashboard.</p>
                                         </div>
 
+                                        {{-- #################### Start: Error/Success Notification #################### --}}
                                         @if ($errors->any())
-                                            <ul class="text-danger mt-4">
-                                                @foreach ($errors->all() as $error)
-                                                    <li>{{ $error }}</li>
-                                                @endforeach
-                                            </ul>
+                                            <div class="alert alert-danger text-center my-4" role="alert">
+                                                <ul class="text-danger mt-3">
+                                                    @foreach ($errors->all() as $error)
+                                                        <li style="text-align: left;">{{ $error }}</li>
+                                                    @endforeach
+                                                </ul>
+                                            </div>
                                         @endif
 
                                         @if (Session::has('error'))
-                                            <ul class="text-danger mt-4">
-                                                <li>{{ Session::get('error') }}</li>
-                                            </ul>
+                                            <div class="alert alert-danger text-center my-4" role="alert">
+                                                <ul class="text-danger mt-3">
+                                                    <li style="text-align: left;">{{ Session::get('error') }}</li>
+                                                </ul>
+                                            </div>
                                         @endif
+
                                         @if (Session::has('success'))
-                                            <ul class="text-success mt-4">
-                                                <li>{{ Session::get('success') }}</li>
-                                            </ul>
+                                            <div class="alert alert-success text-center my-4" role="alert">
+                                                <ul class="text-success mt-3">
+                                                    <li style="text-align: left;">{{ Session::get('success') }}</li>
+                                                </ul>
+                                            </div>
                                         @endif
+                                        {{-- #################### End: Error/Success Notification #################### --}}
+
                                         <form class="mt-4 pt-2" action="{{ route('admin.login.submit') }}" method="post">
+
                                             @csrf
 
                                             <div class="mb-3">
                                                 <label class="form-label">Email</label>
                                                 <input type="email" name="email" class="form-control" id="email" placeholder="Enter Email">
                                             </div>
+
                                             <div class="mb-3">
                                                 <div class="d-flex align-items-start">
                                                     <div class="flex-grow-1">
@@ -103,9 +115,11 @@
                                                     <button class="btn btn-light shadow-none ms-0" type="button" id="password-addon"><i class="mdi mdi-eye-outline"></i></button>
                                                 </div>
                                             </div>
+
                                             <div class="mb-3">
                                                 <button class="btn btn-primary w-100 waves-effect waves-light" type="submit">Log In</button>
                                             </div>
+
                                         </form>
 
                                         <div class="mt-4 text-center">
