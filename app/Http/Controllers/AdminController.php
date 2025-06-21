@@ -14,7 +14,7 @@ class AdminController extends Controller
 {
     public function AdminLogin()
     {
-        return view('admin.login');
+        return view('admin.auth.login');
     } //End Method
 
     public function AdminDashboard()
@@ -51,7 +51,7 @@ class AdminController extends Controller
 
     public function AdminForgetPassword()
     {
-        return view('admin.forget_password');
+        return view('admin.auth.forget_password');
     } //End Method
 
     public function AdminForgetPasswordSubmit(Request $request)
@@ -88,7 +88,7 @@ class AdminController extends Controller
             return redirect()->route('admin.login')->with('error', 'Invalid Token or Email');
         }
 
-        return view('admin.reset_password', compact('token', 'email'));
+        return view('admin.auth.reset_password', compact('token', 'email'));
     } //End Method
 
     public function AdminResetPasswordSubmit(Request $request)
