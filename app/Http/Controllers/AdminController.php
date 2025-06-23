@@ -112,7 +112,7 @@ class AdminController extends Controller
 
         $profile_data = Admin::find($id);
 
-        return view('admin.profile.profile_dashboard', compact('profile_data'));
+        return view('admin.profile.admin_profile', compact('profile_data'));
     } //End Method
 
     public function AdminProfileStore(Request $request)
@@ -157,4 +157,13 @@ class AdminController extends Controller
             unlink($full_path);
         }
     } //End Private Method
+
+    public function AdminChangePassword()
+    {
+        $id = Auth::guard('admin')->id();
+
+        $profile_data = Admin::find($id);
+
+        return view('admin.profile.admin_change_password', compact('profile_data'));
+    } //End Method
 }
