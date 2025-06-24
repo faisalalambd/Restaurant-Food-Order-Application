@@ -112,7 +112,7 @@
 
                                                 <div class="input-group auth-pass-inputgroup">
                                                     <input type="password" name="password" class="form-control" placeholder="Enter password" aria-label="Password" aria-describedby="password-addon">
-                                                    <button class="btn btn-light shadow-none ms-0" type="button" id="password-addon"><i class="mdi mdi-eye-outline"></i></button>
+                                                    <button class="btn btn-light shadow-none password-addon ms-0" type="button"><i class="mdi mdi-eye-outline"></i></button>
                                                 </div>
                                             </div>
 

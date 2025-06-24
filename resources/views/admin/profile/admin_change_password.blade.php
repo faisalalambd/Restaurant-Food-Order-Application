@@ -67,30 +67,60 @@
                                 @csrf
 
                                 <div class="row">
+
                                     <div class="col-lg-6">
+
                                         <div>
+
                                             <div class="mb-3">
-                                                <label for="old_password" class="form-label">Old Password</label>
-                                                <input class="form-control @error('old_password') is-invalid @enderror" type="password" name="old_password" id="old_password">
+                                                <div class="d-flex align-items-start">
+                                                    <div class="flex-grow-1">
+                                                        <label class="form-label">Old Password</label>
+                                                    </div>
+                                                </div>
+                                                <div class="input-group auth-pass-inputgroup">
+                                                    <input type="password" name="old_password" class="form-control @error('old_password') is-invalid @enderror" aria-label="Password" aria-describedby="password-addon-class">
+                                                    <button class="btn btn-light shadow-none ms-0 password-addon" type="button"><i class="mdi mdi-eye-outline"></i></button>
+                                                </div>
                                                 @error('old_password')
                                                     <span class="text-danger">{{ $message }}</span>
                                                 @enderror
                                             </div>
+
                                             <div class="mb-3">
-                                                <label for="new_password" class="form-label">New Password</label>
-                                                <input class="form-control @error('new_password') is-invalid @enderror" type="password" name="new_password" id="new_password">
+                                                <div class="d-flex align-items-start">
+                                                    <div class="flex-grow-1">
+                                                        <label class="form-label">New Password</label>
+                                                    </div>
+                                                </div>
+                                                <div class="input-group auth-pass-inputgroup">
+                                                    <input type="password" name="new_password" class="form-control @error('new_password') is-invalid @enderror" aria-label="Password" aria-describedby="password-addon">
+                                                    <button class="btn btn-light shadow-none ms-0 password-addon" type="button"><i class="mdi mdi-eye-outline"></i></button>
+                                                </div>
                                                 @error('new_password')
                                                     <span class="text-danger">{{ $message }}</span>
                                                 @enderror
                                             </div>
+
                                             <div class="mb-3">
-                                                <label for="new_password_confirmation" class="form-label">Confirm New Password</label>
-                                                <input class="form-control" type="password" name="new_password_confirmation" id="new_password_confirmation">
+                                                <div class="d-flex align-items-start">
+                                                    <div class="flex-grow-1">
+                                                        <label class="form-label">Confirm New Password</label>
+                                                    </div>
+                                                </div>
+                                                <div class="input-group auth-pass-inputgroup">
+                                                    <input type="password" name="new_password_confirmation" class="form-control" aria-label="Password" aria-describedby="password-addon">
+                                                    <button class="btn btn-light shadow-none ms-0 password-addon" type="button"><i class="mdi mdi-eye-outline"></i></button>
+                                                </div>
                                             </div>
+
+
                                             <div class="mt-4">
                                                 <button type="submit" class="btn btn-primary waves-effect waves-light">Save Changes</button>
                                             </div>
+
                                         </div>
+
                                     </div>
 
                                 </div>

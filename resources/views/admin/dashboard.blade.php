@@ -80,6 +80,8 @@
     <script src="{{ asset('backend/assets/js/pages/dashboard.init.js') }}"></script>
     {{-- App JS --}}
     <script src="{{ asset('backend/assets/js/app.js') }}"></script>
+    {{-- Password Adoon Init JS --}}
+    <script src="{{ asset('backend/assets/js/pages/pass-addon.init.js') }}"></script>
     {{-- Toastr JS --}}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     {{-- Custom Scripts --}}
