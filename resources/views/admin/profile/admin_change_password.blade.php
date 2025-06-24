@@ -60,7 +60,7 @@
 
                     <div class="card-body p-4">
 
-                        <form action="{{ route('admin.profile.store') }}" method="post" enctype="multipart/form-data">
+                        <form action="{{ route('admin.password.update') }}" method="post" enctype="multipart/form-data">
 
                             @csrf
 
@@ -82,8 +82,8 @@
                                             @enderror
                                         </div>
                                         <div class="mb-3">
-                                            <label for="confirm_new_password" class="form-label">Confirm New Password</label>
-                                            <input class="form-control" type="password" name="confirm_new_password" id="confirm_new_password">
+                                            <label for="new_password_confirmation" class="form-label">Confirm New Password</label>
+                                            <input class="form-control" type="password" name="new_password_confirmation" id="new_password_confirmation">
                                         </div>
                                         <div class="mt-4">
                                             <button type="submit" class="btn btn-primary waves-effect waves-light">Save Changes</button>
