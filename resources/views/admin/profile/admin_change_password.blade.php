@@ -58,42 +58,46 @@
 
                     </div>
 
-                    <div class="card-body p-4">
+                    <div class="card">
 
-                        <form action="{{ route('admin.password.update') }}" method="post" enctype="multipart/form-data">
+                        <div class="card-body p-4">
 
-                            @csrf
+                            <form action="{{ route('admin.password.update') }}" method="post" enctype="multipart/form-data">
 
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <div>
-                                        <div class="mb-3">
-                                            <label for="old_password" class="form-label">Old Password</label>
-                                            <input class="form-control @error('old_password') is-invalid @enderror" type="password" name="old_password" id="old_password">
-                                            @error('old_password')
-                                                <span class="text-danger">{{ $message }}</span>
-                                            @enderror
-                                        </div>
-                                        <div class="mb-3">
-                                            <label for="new_password" class="form-label">New Password</label>
-                                            <input class="form-control @error('new_password') is-invalid @enderror" type="password" name="new_password" id="new_password">
-                                            @error('new_password')
-                                                <span class="text-danger">{{ $message }}</span>
-                                            @enderror
-                                        </div>
-                                        <div class="mb-3">
-                                            <label for="new_password_confirmation" class="form-label">Confirm New Password</label>
-                                            <input class="form-control" type="password" name="new_password_confirmation" id="new_password_confirmation">
-                                        </div>
-                                        <div class="mt-4">
-                                            <button type="submit" class="btn btn-primary waves-effect waves-light">Save Changes</button>
+                                @csrf
+
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div>
+                                            <div class="mb-3">
+                                                <label for="old_password" class="form-label">Old Password</label>
+                                                <input class="form-control @error('old_password') is-invalid @enderror" type="password" name="old_password" id="old_password">
+                                                @error('old_password')
+                                                    <span class="text-danger">{{ $message }}</span>
+                                                @enderror
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="new_password" class="form-label">New Password</label>
+                                                <input class="form-control @error('new_password') is-invalid @enderror" type="password" name="new_password" id="new_password">
+                                                @error('new_password')
+                                                    <span class="text-danger">{{ $message }}</span>
+                                                @enderror
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="new_password_confirmation" class="form-label">Confirm New Password</label>
+                                                <input class="form-control" type="password" name="new_password_confirmation" id="new_password_confirmation">
+                                            </div>
+                                            <div class="mt-4">
+                                                <button type="submit" class="btn btn-primary waves-effect waves-light">Save Changes</button>
+                                            </div>
                                         </div>
                                     </div>
+
                                 </div>
 
-                            </div>
+                            </form>
 
-                        </form>
+                        </div>
 
                     </div>
 
